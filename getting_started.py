@@ -89,7 +89,39 @@ Some popular styles include:
 'seaborn' - Based on another Python visualization library
 'classic' - The default color scheme for Matplotlib
 """
+# Choose any of the styles
+plt.style.use("fivethirtyeight")
 
+# Plot lines
+plt.plot(data["Year"], data["Phoenix Police Dept"], label="Phoenix")
+plt.plot(data["Year"], data["Los Angeles Police Dept"], label="Los Angeles")
+plt.plot(data["Year"], data["Philadelphia Police Dept"], label="Philadelphia")
+
+# Add a legend
+plt.legend()
+
+# Display the plot
+plt.show()
+
+
+# View all styles by typing print(plt.style.available) in the console
+print(plt.style.available)
+
+# Plot each line
+plt.plot(ransom.letter, ransom.frequency,
+         label='Ransom', linestyle=':', color='gray')
+plt.plot(suspect1.letter, suspect1.frequency, label='Fred Frequentist')
+plt.plot(suspect2.letter, suspect2.frequency, label='Gertrude Cox')
+
+# Add x- and y-labels
+plt.xlabel("Letter")
+plt.ylabel("Frequency")
+
+# Add a legend
+plt.legend()
+
+# Display plot
+plt.show()
 
 
 
